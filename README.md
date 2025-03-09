@@ -5,7 +5,8 @@ We can automate the resource deployment in any cloud providers (AWS, Azure, GCP)
 Lets say you are a Devops Eng and given a task to create S3 bucket for AWS. Go to AWS console then provide  your cred (username and password) to authenticate AWS and search for S3 service and go there and provide all the required details (name, location and etc)and create it for this hardly it will take 5 mins.
 If you get similar kind of requests from multiple teams it will take time using UI with manual efforts. To avoid this we can use programmatic approach through AWS CLI, AWS API.
 For every resource in aws like S3 bucket or instance it will develop API, using any programming language we can talk to aws services programmatic language trough the API
- which means you can call to aws instead of login to aws for particular progam
+ which means you can call to aws instead of login to aws for particular progam.
+ You can use either CLI or API write code in single line (python)to create S3 bucket using this we can create multiple resource with in fraction of seconds. It can reduce the manual efforts.
 
 
 Q-1 How AWS\GCP\Azure is linked to Terraform 
