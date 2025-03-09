@@ -10,6 +10,9 @@ For every resource in aws like S3 bucket or instance it will develop API, using 
 If we ant to create VPC, VPC Config, EC2 instance which is highly available and S3 bucket end point of VPC config, if we want to do all of these things we need to have a good programming language.
 The cloud providers like aws says to Devops eng that some of you dont have good programming language then what we can do is we will do heavy lifting and will introduce Cloud Formation Template (CFT). 
 In CFT we can write a template either Json\YAML, most of the people in the industry they know Json\YAML as its standard template to share the output or to provide input to any tools.
+CFT will allow you to write your infrastructure as Code. We will just write i need VPC, S3 and other config which required in terms of templating language.
+
+
 
 
 
