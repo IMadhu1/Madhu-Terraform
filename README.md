@@ -16,6 +16,11 @@ CFT has a very good documentation, we can go to CFT doc and see how to write Jso
 There are so many IaC tools available in Market.
 For AWS ---> Cloud Formation Template
 For Azure ----> Azure Resource Manager -- If you go to ARM Template we can see how to provide Json syntax and YAML syntax. If we want to Azure VM, AKS Cluster or Blob storge we can put in the format in ARM Template then it will make a request to Azure ant it will create out infra. 
+If we are working on open stack they have Heat template.
+There are multiple tools in the market, for each provider the developer of the provider has provided the template.
+AWS -- Cloud Formation Template
+Azure -- Azure Resource Manager
+Open Stack -- Heat Template
 
 
 
