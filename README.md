@@ -76,6 +76,15 @@ Instane_type = "t2.micro"
 We can copy it from terraform documentation (search in google terrform aws then go to AWS provider Hashicorp )
 In Hashicorp documentation search for syntax, in the filter search for ec2 under ec2 we want to create ec2 instance --> awsinstance
 Note : in Harshicorp Doc we can find example syntax for all resource creation
+We have provided aws security details using --> aws configure command
+after this we need to run bunch of Terraform commands it will help you to configure infra
+## Terraform Commands
+1. Terraform init --- it will initialize the configurtion (We need to provide right path)
+2. ls --> it will display all the directories
+3. Terraform Plan -- it will shown us the configurtion\code which we are going to apply
+4. Terraform apply -- to execute the commands
+   
+
 
 
 
