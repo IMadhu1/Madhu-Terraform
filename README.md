@@ -74,7 +74,9 @@ ex: Resource "aws_instance" {
 ami = "appropriate ami id"
 Instane_type = "t2.micro"
 We can copy it from terraform documentation (search in google terrform aws then go to AWS provider Hashicorp )
-In Hashicorp documentation search for syntax
+In Hashicorp documentation search for syntax, in the filter search for ec2 under ec2 we want to create ec2 instance --> awsinstance
+Note : in Harshicorp Doc we can find example syntax for all resource creation
+
 
 
 
