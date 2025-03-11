@@ -52,12 +52,33 @@ Note: When we practice terraform we also need to install Visual Studio
 Now we can see Terraform and AWS installed in our devcontainer
 ## Configure Terraform for AWS (In Org we can use IAM user)
 Login to AWS console go to root user --> security Credentials --> fetrch the information of aws access keys, if we have old keys delete and create new key then it will create secrete access key along with access key.
+## Step 1
 Go to VS code or Terminal in code space run the command ---> aws configure
 It will ask AWS access Key ID --> enter new access key
 then it will ask AWS secrete access key ID --> enter new secrete access key id 
 it will ask Default region name --> enter the region which we want to create resource for ex us-east-1
 it will ask default output format --> enter json
-Now aws is configured for verification run the command ---> aws S3 ls then we will see all the details 
+Now aws is configured for verification run the command ---> aws S3 ls then we will see all S3 bucket details 
+## Step 2
+We will write a Terraform Provider.tf file or Terraform file
+Go to Github reposiroty Every project we need to upload file,we are authenticate to aws and create ec2 instance.
+we can create file called main.tf in that what we need to do is firsly we explain Terraform when ever we arite a code in T\F it does not understand are we writing a script for automating AWS, Azure or GCP
+We need to create a file in our VS environment or in Terminal like main.tf file because it is main configuration file. 
+Inside main.tf first thing we need to write is what is our provider configuration
+ex: Provider "aws" {
+Region = "us-east-1"
+}
+the above step verify the Terraform does have the access to aws to run a particular command
+After that we want to provide resource which want to create
+ex: Resource "aws_instance" {
+ami = "appropriate ami id"
+Instane_type = "t2.micro"
+We can copy it from terraform documentation (search in google terrform aws then go to AWS provider Hashicorp )
+In Hashicorp documentation search for syntax
+
+
+
+
 
 
 
