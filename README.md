@@ -83,6 +83,8 @@ after this we need to run bunch of Terraform commands it will help you to config
 2. ls --> it will display all the directories
 3. Terraform Plan -- it will shown us the configurtion\code which we are going to apply
 4. Terraform apply -- to execute the commands
+5. Terraform destroy -- remove or delete the created configuration
+for ami id -- Go to aws console and click on launch instance then select OS flavour then will get the ami id
    
 
 
