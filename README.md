@@ -28,6 +28,14 @@ Just tell to Terraform i.e create resource in Azure or AWS or GCP then it will c
 How to learn Terraform templating language Harshicorp language Template.
 Competitors to Terraform --Cross Plane and so many tools but Terraform started the universal approach where one Terraform using the concept of API as code internally 
 Irresptive of providers API as code will directly talk to provider, HCL will convert the code to required API like Azure API or AWS API and apply this to create infra. Terraform has very good community. Terraform has easier code 
+## How to Install Terraform.
+We can directly intall it from browser for windows\Linux\Unix\Mac https://releases.hashicorp.com/terraform/1.11.1/terraform_1.11.1_windows_386.zip.
+or If we dont have any laptop or resource to install
+Login to your GitHub account
+Click on the Profile Icon to the top right
+Click on "your codespaces"
+Codespaces will provide you a virtual machine with Ubuntu and VS Code by default.
+Follow the steps provided in Download to install Terraform.
 
 
 
