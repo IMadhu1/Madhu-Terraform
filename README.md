@@ -33,9 +33,13 @@ We can directly intall it from browser for windows\Linux\Unix\Mac https://releas
 or If we dont have any laptop or resource to install
 Login to your GitHub account
 Click on the Profile Icon to the top right
-Click on "your codespaces"
+Click on "your codespaces" and it will provide 60 hours (2CPU 4GB RAM)free time for a Month
 Codespaces will provide you a virtual machine with Ubuntu and VS Code by default.
 Follow the steps provided in Download to install Terraform.
+## Code Space Configuration
+When we click on Code space it will take time for configuration for first time to create code space, its like a single virtual machine it is actually a continer.
+
+
 
 
 
