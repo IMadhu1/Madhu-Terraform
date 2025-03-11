@@ -50,6 +50,9 @@ before installing terraform we need to install aws, again go to search type >dev
 Final step search >rebuild and click on Rebuild container --> we will get rebuild popup then we need to click on it--> it is trying to rebuild the devcontainer then we will get new container, it will install terraform AWS CLI
 Note: When we practice terraform we also need to install Visual Studio
 Now we can see Terraform and AWS installed in our devcontainer
+## Configure Terraform for AWS (In Org we can use IAM user)
+Login to AWS console go to root user --> security Credentials --> fetrch the information of aws access keys, if we have old keys delete and create new key then it will create secrete access key along with access key.
+Go to VS code or Terminal in code space
 
 
 
