@@ -93,8 +93,8 @@ we can install Hashicorp Terraform plugin and Hashicorp HCL extension
 
 ## Terraform Life cycle
 1. Terraform init
-2. Terraform Plan
-3. Terraform state
+2. Terraform plan
+3. Terraform apply
 4. Terraform destroy
 
 
