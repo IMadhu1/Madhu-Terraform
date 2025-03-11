@@ -21,14 +21,17 @@ There are multiple tools in the market, for each provider the developer of the p
 AWS -- Cloud Formation Template
 Azure -- Azure Resource Manager
 Open Stack -- Heat Template
+Organization will use AWS, Azure, GCP, Open stack we need to learn many tools to automate the things but Terraform will solve the problems without learning multiple tools.
+Terraform will come up with universal approach that means we dont need to learn multiple tools just learn T\F. 
+Just tell to Terraform i.e create resource in Azure or AWS or GCP then it will create.Terraform is very important because irrespective of provider which we can use
 
 
 
 
 
-Q-1 How AWS\GCP\Azure is linked to Terraform 
-Q-2 What are the different providers TF support --Categorized to Official (aws,azure,gcp,kubernities), partner  , community
-Q-3 How many Providers can be deployed in single code 
+Q-1 How AWS\GCP\Azure is linked to Terraform --->Terraform integrates with AWS, GCP, and Azure through provider plugins, allowing you to manage infrastructure in these cloud environments. You write configuration files, define the desired state of resources, and then use Terraform commands to create, update, and manage those resources across various cloud platforms. The flexibility of Terraform in supporting multiple providers enables seamless multi-cloud and hybrid cloud management.
+Q-2 What are the different providers TF support ---> Categorized to Official (aws,azure,gcp,kubernities), partner  , community
+Q-3 How many Providers can be deployed in single code ---> There is no fixed limit to the number of providers you can use in a single Terraform configuration. You can deploy resources across different cloud providers like AWS, Azure, GCP, and others, using multiple provider blocks, optionally with aliases to manage different accounts, regions, or subscriptions. However, when working with multiple providers, always ensure that the configuration and state management are handled appropriately for the complexity of your infrastructure.
 Q-4 Can we deploy 2 VM's in 2 diffetrent regions at a time in a single code
 Q-5 How to destroy a single instance 
 Q-6 What is the difference b\w input and output variable
