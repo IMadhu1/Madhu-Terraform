@@ -52,7 +52,13 @@ Note: When we practice terraform we also need to install Visual Studio
 Now we can see Terraform and AWS installed in our devcontainer
 ## Configure Terraform for AWS (In Org we can use IAM user)
 Login to AWS console go to root user --> security Credentials --> fetrch the information of aws access keys, if we have old keys delete and create new key then it will create secrete access key along with access key.
-Go to VS code or Terminal in code space
+Go to VS code or Terminal in code space run the command ---> aws configure
+It will ask AWS access Key ID --> enter new access key
+then it will ask AWS secrete access key ID --> enter new secrete access key id 
+it will ask Default region name --> enter the region which we want to create resource for ex us-east-1
+it will ask default output format --> enter json
+Now aws is configured for verification run the command ---> aws S3 ls then we will see all the details 
+
 
 
 
