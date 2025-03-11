@@ -91,7 +91,11 @@ after this we need to run bunch of Terraform commands it will help you to config
 for ami id -- Go to aws console and click on launch instance then select OS flavour then will get the ami id
 we can install Hashicorp Terraform plugin and Hashicorp HCL extension
 
-   
+## Terraform Life cycle
+1. Terraform init
+2. Terraform Plan
+3. Terraform state
+4. Terraform destroy
 
 
 
