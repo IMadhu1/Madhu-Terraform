@@ -73,6 +73,9 @@ After that we want to provide resource which want to create
 ex: Resource "aws_instance" {
 ami = "appropriate ami id"
 Instane_type = "t2.micro"
+subnet_id = "Subnet-XXXX"
+key_name = "aws_login"
+}
 We can copy it from terraform documentation (search in google terrform aws then go to AWS provider Hashicorp )
 In Hashicorp documentation search for syntax, in the filter search for ec2 under ec2 we want to create ec2 instance --> awsinstance
 Note : in Harshicorp Doc we can find example syntax for all resource creation
@@ -85,6 +88,8 @@ after this we need to run bunch of Terraform commands it will help you to config
 4. Terraform apply -- to execute the commands
 5. Terraform destroy -- remove or delete the created configuration
 for ami id -- Go to aws console and click on launch instance then select OS flavour then will get the ami id
+we can install Hashicorp Terraform plugin and Hashicorp HCL extension
+
    
 
 
