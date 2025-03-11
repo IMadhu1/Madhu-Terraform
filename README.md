@@ -25,6 +25,7 @@ Open Stack -- Heat Template
 
 
 
+
 Q-1 How AWS\GCP\Azure is linked to Terraform 
 Q-2 What are the different providers TF support --Categorized to Official (aws,azure,gcp,kubernities), partner  , community
 Q-3 How many Providers can be deployed in single code 
