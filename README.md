@@ -38,6 +38,17 @@ Codespaces will provide you a virtual machine with Ubuntu and VS Code by default
 Follow the steps provided in Download to install Terraform.
 ## Code Space Configuration
 When we click on Code space it will take time for configuration for first time to create code space, its like a single virtual machine it is actually a continer.
+to check Terraform Version use the command --> Terraform --Version, by default Terraform will not install
+to check AWS Version use the command --> aws --Version, by default aws will not be iinstalled
+## Github code space
+Github code space is a sand box environment or we can consider as a container environment
+## Terraform installation in Code Space.
+Go to Search bar type  >dev then we can able to see Code Spaces :Add Dev Container Configuration File it will install AWS and Terraform in our github code space environment
+Click on Modify your active configuration and search for Terraform then you will find verfied mark in Terraform,tflint,TFGrunt devcontainers then select and click OK then select keep defaults.
+Then will get new file been added like devcontainer.json where will see terraform configuration.
+before installing terraform we need to install aws, again go to search type >dev then add dev container configuration file --> click on Modify your active configuration --> search for aws --> First one select AWS CLI devcontainers which we ca see as verified symbol click OK --> keep default
+Final step search >rebuild and click on Rebuild container --> we will get rebuild popup then we need to click on it--> it is trying to rebuild the devcontainer then we will get new container, it will install terraform AWS CLI
+
 
 
 
