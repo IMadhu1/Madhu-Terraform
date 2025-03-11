@@ -48,6 +48,9 @@ Click on Modify your active configuration and search for Terraform then you will
 Then will get new file been added like devcontainer.json where will see terraform configuration.
 before installing terraform we need to install aws, again go to search type >dev then add dev container configuration file --> click on Modify your active configuration --> search for aws --> First one select AWS CLI devcontainers which we ca see as verified symbol click OK --> keep default
 Final step search >rebuild and click on Rebuild container --> we will get rebuild popup then we need to click on it--> it is trying to rebuild the devcontainer then we will get new container, it will install terraform AWS CLI
+Note: When we practice terraform we also need to install Visual Studio
+Now we can see Terraform and AWS installed in our devcontainer
+
 
 
 
