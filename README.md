@@ -119,6 +119,9 @@ Q-2 What are the different providers TF support ---> Categorized to Official (aw
 
 Q-3 How many Providers can be deployed in single code ---> There is no fixed limit to the number of providers you can use in a single Terraform configuration. You can deploy resources across different cloud providers like AWS, Azure, GCP, and others, using multiple provider blocks, optionally with aliases to manage different accounts, regions, or subscriptions. However, when working with multiple providers, always ensure that the configuration and state management are handled appropriately for the complexity of your infrastructure.
 
+
+TASK -- Tearraform Cheek codes --- need to verify 10 codes
+
 Q-4 Can we deploy 2 VM's in 2 diffetrent regions at a time in a single code
 
 Q-5 How to destroy a single instance 
