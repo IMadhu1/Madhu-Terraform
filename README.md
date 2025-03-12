@@ -114,10 +114,18 @@ we can install Hashicorp Terraform plugin and Hashicorp HCL extension
 
 
 Q-1 How AWS\GCP\Azure is linked to Terraform --->Terraform integrates with AWS, GCP, and Azure through provider plugins, allowing you to manage infrastructure in these cloud environments. You write configuration files, define the desired state of resources, and then use Terraform commands to create, update, and manage those resources across various cloud platforms. The flexibility of Terraform in supporting multiple providers enables seamless multi-cloud and hybrid cloud management.
+
 Q-2 What are the different providers TF support ---> Categorized to Official (aws,azure,gcp,kubernities), partner  , community
+
 Q-3 How many Providers can be deployed in single code ---> There is no fixed limit to the number of providers you can use in a single Terraform configuration. You can deploy resources across different cloud providers like AWS, Azure, GCP, and others, using multiple provider blocks, optionally with aliases to manage different accounts, regions, or subscriptions. However, when working with multiple providers, always ensure that the configuration and state management are handled appropriately for the complexity of your infrastructure.
+
 Q-4 Can we deploy 2 VM's in 2 diffetrent regions at a time in a single code
+
 Q-5 How to destroy a single instance 
+
 Q-6 What is the difference b\w input and output variable
+
 Q-7 How many keys we can generate a day
+
 Q-8 Explain complete life cycle of Terraform
+
