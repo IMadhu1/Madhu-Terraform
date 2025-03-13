@@ -116,7 +116,33 @@ Module Terraform
 create 2 users one should have VM contributor vm, key vault and storage and 1 should have sql contributor
 provider "aws"
 
-## Day 2**
+## Day 2
+Will leanr what is provider in detail, different types of providers and configuration of Providers.
+Providers for multiple regions and providers for multiple cloud i.e. hybrid cloud
+How to write resource in Terraform and what exactly is resources
+We can understand variable in tf and input\output variables tfvars 
+Conditional expressions and functions
+Finally debugging and formatting in tf
+
+## Providers
+When we created EC2 instance on the aws platform what we wrote first thing in main.tf file is the Provider bloc, inside proider in "aws" and configuration and other access keys inside brace etc
+but if we dont mention these details in provider and proceeding with resource creation followed by the following code
+If we run terraform init it will get succeeded, if we run terraform apply command how it will apply or understand where it has to create resource, how to athenticate to particular provider. All of these info will be available in Provider block.
+Provider is nothing but its a plugin that helps terraform to understand that where it has to create the infrastructure. So it acts as a Medium for tf to understand where the resource or entire project has to be created. Without provider it is not possible.
+What if we want to create infra on Azure\GCP\Alibaba Cloud instead of AWS, 
+Provider "aws" {
+configuration of Provider like
+region = "us-east-1"
+acccess secrete key etc
+}
+resource "aws_instance" "Example"{
+ami_id = "ami-id"
+instance_type = "t2.micro"
+}
+
+
+
+
 
 
 
