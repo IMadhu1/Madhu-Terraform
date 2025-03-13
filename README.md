@@ -97,6 +97,25 @@ we can install Hashicorp Terraform plugin and Hashicorp HCL extension
 3. Terraform apply
 4. Terraform destroy
 
+Terraform installation
+Terraform Version
+Terraform structure
+Provider "AWS\Azure\GCP"
+Region "us-east-1\West Europe" 
+Define Resource ""
+Define Variable 
+Define Output
+main.tf
+variable.tf
+provider.tf
+output.tf
+Module
+
+Module Terraform 
+1 Linux, 1 Windows VM, 1 storage account, 1 key vault, 1 Sql
+create 2 users one should have VM contributor vm, key vault and storage and 1 should have sql contributor
+
+provider "aws"
 **## Day 2**
 
 
