@@ -97,6 +97,7 @@ we can install Hashicorp Terraform plugin and Hashicorp HCL extension
 3. Terraform apply
 4. Terraform destroy
 
+## IMP TOPICS
 Terraform installation
 Terraform Version
 Terraform structure
@@ -127,9 +128,6 @@ Finally debugging and formatting in tf
 ## Providers
 When we created EC2 instance on the aws platform what we wrote first thing in main.tf file is the Provider bloc, inside proider in "aws" and configuration and other access keys inside brace etc
 but if we dont mention these details in provider and proceeding with resource creation followed by the following code
-If we run terraform init it will get succeeded, if we run terraform apply command how it will apply or understand where it has to create resource, how to athenticate to particular provider. All of these info will be available in Provider block.
-Provider is nothing but its a plugin that helps terraform to understand that where it has to create the infrastructure. So it acts as a Medium for tf to understand where the resource or entire project has to be created. Without provider it is not possible.
-What if we want to create infra on Azure\GCP\Alibaba Cloud instead of AWS, 
 Provider "aws" {
 configuration of Provider like
 region = "us-east-1"
@@ -139,6 +137,48 @@ resource "aws_instance" "Example"{
 ami_id = "ami-id"
 instance_type = "t2.micro"
 }
+
+If we run terraform init it will get succeeded, if we run terraform apply command how it will apply or understand where it has to create resource, how to athenticate to particular provider. All of these info will be available in Provider block.
+Provider is nothing but its a plugin that helps terraform to understand that where it has to create the infrastructure. So it acts as a Medium for tf to understand where the resource or entire project has to be created. Without provider it is not possible.
+What if we want to create infra on Azure\GCP\Alibaba Cloud instead of AWS. 
+Where will understand how to configure these provider, just we can go to terraform providers page and there are hundreds of providers, tf provides so many providers categorized into 3 types.
+
+Official Providers --> the one which Harshicorp actively maintains as Harshicorp is creator of tf they actively maintain the providers like AWS, Azure, GCP, Kubernets
+Partner Providers --> Partner providers are these one where lets say Alibaba cloud harshicorp didnt create provider for them, what alibaba cloud said is okay we will write resources we will tell tf how to authenticate or how to create infra on us and we will actively maintain this particular provider. 
+Community Providers --> Community providers are something where you and me can create the entire configuration and open source will maintin these providers, there is no official packing up by harshicorm or partner provider or any partners of harchicorp.
+In our organization we tyring to automate things in different like apart from AWS, Azure, GCP. If we are using different cloud or creating infra somewhere else then we have to make sure atleast if it is community provider there are some active contribution that are made to it. If there are no active contribution made then it is not that much suggested to user tf provider apart from that if we can user Official and partner no problem at all.
+Interview point of view.
+1. Multiregion setup of tf 
+2. Multiple cloud i.e. Hybrid cloud configuration of tf
+
+## Multi Region
+Lets say we are usin aws and we want to automate the infrastructure us-east-1 as well as us-west-2 then we will srite two provider bolck instead of one provider block.
+In the First provider block we will say provider is aws and will use keyword as alias  and for us-west-2 again will write provider block and will create different alias, 
+ex:Provider 1
+Provider "aws" {
+  alias = "us-east-1"
+  region = "us-east-1"
+  }
+  Provider 2
+ Provider "aws" {
+  alias = "us-west-2"
+  region = "us-west-2"
+  }
+when we try to create ec2 instance what we have to do is we have to writen is  resource ec2 instance
+ex: resource "aws_instance" "Example name" {
+    ami = "ami id"
+    instance_type = "t2.micro"
+    Provider = "aws.us-east-1"
+    }
+resource "aws_instance" "Example name" {
+    ami = "ami id"
+    instance_type = "t2.micro"
+    Provider = "aws.us-west-2"
+    }
+
+
+
+
 
 
 
