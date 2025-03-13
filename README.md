@@ -177,6 +177,8 @@ resource "aws_instance" "Example name" {
     }
 
 ## MultiCloud or Hybrid cloud 
+If organizations will use Hybrid cloud in such cases sa same the above we will configure providers with different names
+AWS has the provider name as aws and Azure has the provider name as Azurerm, we can find the provider names in official document. Without go through the official document we cant know the provider names
 
 
 
