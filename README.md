@@ -188,6 +188,15 @@ Tenant_id = "Azure-tenant-id"
 Client_secrete = "Azure-secrete-id"
 Client_id = "Azure-Client-id"
 }
+resource "aws-instance" "Example name" {
+ami-id = "ami.id name"
+instance_type = "t2.micro"
+}
+resource "Azurerm-virtual-machine" "example name" {
+name = "example-vm"
+location = "west europe"
+size = "Standard_A1"
+}
 
 
 
