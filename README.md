@@ -97,7 +97,7 @@ we can install Hashicorp Terraform plugin and Hashicorp HCL extension
 3. Terraform apply
 4. Terraform destroy
 
-
+**## Day 2**
 
 
 
