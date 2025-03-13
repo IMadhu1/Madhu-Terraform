@@ -164,7 +164,7 @@ Provider "aws" {
   alias = "us-west-2"
   region = "us-west-2"
   }
-when we try to create ec2 instance what we have to do is we have to writen is  resource ec2 instance
+when we try to create ec2 instance what we have to do is we have to writen is  resource ec2 instance example and we provided what is the ami and instance type, apart from that when you want to create resource in multiple regions you can create alias for your provider and within that particular resource block we can say provider = aws.the name of the alias. This is how we can setup tf for multiregion
 ex: resource "aws_instance" "Example name" {
     ami = "ami id"
     instance_type = "t2.micro"
@@ -176,6 +176,7 @@ resource "aws_instance" "Example name" {
     Provider = "aws.us-west-2"
     }
 
+## MultiCloud or Hybrid cloud 
 
 
 
