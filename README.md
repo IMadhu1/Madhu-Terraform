@@ -114,9 +114,9 @@ Module
 Module Terraform 
 1 Linux, 1 Windows VM, 1 storage account, 1 key vault, 1 Sql
 create 2 users one should have VM contributor vm, key vault and storage and 1 should have sql contributor
-
 provider "aws"
-**## Day 2**
+
+## Day 2**
 
 
 
