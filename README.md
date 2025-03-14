@@ -1,6 +1,6 @@
 # Madhu-Terraform
 ## Day-1 
-Terraform advantages
+Terraform advantages 
 We can automate the resource deployment in any cloud providers (AWS, Azure, GCP)
 Lets say you are a Devops Eng and given a task to create S3 bucket for AWS. Go to AWS console then provide  your cred (username and password) to authenticate AWS and search for S3 service and go there and provide all the required details (name, location and etc)and create it for this hardly it will take 5 mins.
 If you get similar kind of requests from multiple teams it will take time using UI with manual efforts. To avoid this we can use programmatic approach through AWS CLI, AWS API.
