@@ -204,7 +204,7 @@ Advantages of Variables: Variable is used to paramaterize, they can be used as P
 Same in tf, lets say we write a standard tf project and this tf project is used by one particular team. Later other team comes up with the same request so if you are hard coding values in the tf, in main.tf we have hard coded the ami values and instance_type value. But this is not the good practice beacuse if some other team as a DevOps person we will support multiple teams.
 If some other team comes and tells us they need tf coe to create EC2 instance, we have already one code then why we need to raise again and again, if we are hard coding the ami value and instance_type value that is what we will do, we will rewrite this entire project for another team so to solve this problem what will do instead of providing the ami value as string we can replace with variable and instead of writing instance value  we can replace with variable.
 In TF there are 2 types of variables --> 1. Input Variable , 2. Output Variable
-Input Variable : If we ant to pass some information to tf then it is called Input Variable 
+Input Variable : If we want to pass some information to tf then it is called Input Variable 
 Output Variable : If we want tf to print a particular value in the output is called output variable
 Ex: main.tf
 Provider "aws"{
@@ -255,13 +255,18 @@ Q-3 How many Providers can be deployed in single code ---> There is no fixed lim
 
 TASK -- Tearraform Cheek codes --- need to verify 10 codes
 
-Q-4 Can we deploy 2 VM's in 2 diffetrent regions at a time in a single code
+Q-4 Can we deploy 2 VM's in 2 diffetrent regions at a time in a single code --> yes we can create 
 
-Q-5 How to destroy a single instance 
+Q-5 How to destroy a single instance --> using terraform destroy -target command we can delete single instance
 
-Q-6 What is the difference b\w input and output variable
+Q-6 What is the difference b\w input and output variable  --> If we want to pass some info to tf then its called input variables, if we want tf to print some value is called outpout variables
 
 Q-7 How many keys we can generate a day
 
 Q-8 Explain complete life cycle of Terraform
+Terraform init
+Terraform plan
+Terraform apply
+Terraform destroy
+
 
