@@ -225,7 +225,7 @@ Variable "instance_type" {
       description = "EC2 AMI ID"
       type = "string"
   }
-      
+  
 
 
 
