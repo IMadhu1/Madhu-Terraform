@@ -201,7 +201,11 @@ size = "Standard_A1"
 ## Variables
 Variables are very quite common, any programming language that we are trying to learn or any scripting we will use variables
 Advantages of Variables: Variable is used to paramaterize, they can be used as Params to pass values to our project. 
-Same in tf, lets say we write 
+Same in tf, lets say we write a standard tf project and this tf project is used by one particular team. Later other team comes up with the same request so if you are hard coding values in the tf, in main.tf we have hard coded the ami values and instance_type value. But this is not the good practice beacuse if some other team as a DevOps person we will support multiple teams.
+If some other team comes and tells us they need tf coe to create EC2 instance, we have already one code then why we need to raise again and again, if we are hard coding the ami value and instance_type value that is what we will do, we will rewrite this entire project for another team so to solve this problem what will do instead of providing the ami value as string we can replace with variable and instead of writing instance value  we can replace with variable.
+
+
+
 
 
 
