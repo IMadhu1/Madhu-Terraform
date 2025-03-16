@@ -254,7 +254,13 @@ terraform.tfvars
 this is the standard peocess, we can change the names of this file but if we use this standard way anybody who will read your project they will understand.
 and the file name called main.tf apart from this there is a file calles terraform.tfvars
 ** terraform.tfvars **
-when we are executing the particular tf project we want to take the values of the variable dynamically.  so the instance_type for one project the DevOps team is supporting is t2.micro and tomorrow someone comes and executing this 
+when we are executing the particular tf project we want to take the values of the variable dynamically.  so the instance_type for one project the DevOps team is supporting is t2.micro and tomorrow someone comes and executing this they want the instance type to be t2.medium or other type.
+how to completely paramaterize or how to pass this value to variable, in terraform there is a concept called tfvars
+so tfvars what will try to do is will try to put the values to these variables that means we wrote the entire file we wrote input.tf, output.tf along with that we create a file called terraform.tfvars and inside this file we will write that aws_instance = "t2.micro" actual values of the varaibles.
+the advantage of this is tomorrow any team tries to execute this entire project they can just change the tfvars file. 
+Lets say we have a TF project for a Dev, Staging and Prod environments 
+
+
 
 
 
