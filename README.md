@@ -260,7 +260,12 @@ so tfvars what will try to do is will try to put the values to these variables t
 the advantage of this is tomorrow any team tries to execute this entire project they can just change the tfvars file. 
 Lets say we have a TF project for a Dev, Staging and Prod environments, we want user same tf project for different environments, for one environment tf script for EC2 instance and the tf instance type for the Dev environment is t2.medium where as for production environment the value is t2.micro then what will do inside input.tf will create that variable but inside terraform.tfvars will actually pass the values for it its just a key value pair file where inside that file will write values for each and every variable that we are creating in input.tf 
 Lets say we want to write a value Instance type (Instance_type = "t2.micro") then key value pair (key name = "xxxx") security groups like subnet id's all of this thing we can provide in tfvars file and then we run terraform apply bydefault terraform look for terraform.tfvars file and it will replace or update the values inside input.tf, what ever we provde in input.tf
+tfvars file bydefault will have terraform.tfvars if we want to change it dev.tfvars in such case what will do it we need to pass that information to terraform apply command
+we will say what is the name of the tfvars if we are using terraform.tfvars we dont need to pass that to terraform apply but if we are changing the name then we need to pass that to terraform apply command.
 
+** Conditional Expressions **
+Conditional Expressions are nothing but, insome cases we want to excute, lets say there is a resource block and this particular resource block called aws_instance, in that particular resource we want to execute some values like 10 or 12 values want to execute on Dev environment where as if its a Prod aws environment we ant to modify these couple fields or dont want to execute couple of fields.
+For example we have a S3 bucket and if we are creating S3 bucket on Dev cluster i.e. Dev aws environment, lets say we want to enable public access to S3 bucket, where as if it a Prod cluster we dont want to enable the public access to the S3 bucket. what we are trying to do here is we are going to porform Conditional actions.
 
 
 
