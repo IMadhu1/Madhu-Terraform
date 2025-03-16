@@ -258,7 +258,11 @@ when we are executing the particular tf project we want to take the values of th
 how to completely paramaterize or how to pass this value to variable, in terraform there is a concept called tfvars
 so tfvars what will try to do is will try to put the values to these variables that means we wrote the entire file we wrote input.tf, output.tf along with that we create a file called terraform.tfvars and inside this file we will write that aws_instance = "t2.micro" actual values of the varaibles.
 the advantage of this is tomorrow any team tries to execute this entire project they can just change the tfvars file. 
-Lets say we have a TF project for a Dev, Staging and Prod environments 
+Lets say we have a TF project for a Dev, Staging and Prod environments, we want user same tf project for different environments, for one environment tf script for EC2 instance and the tf instance type for the Dev environment is t2.medium where as for production environment the value is t2.micro then what will do inside input.tf will create that variable but inside terraform.tfvars will actually pass the values for it its just a key value pair file where inside that file will write values for each and every variable that we are creating in input.tf 
+Lets say we want to write a value Instance type (Instance_type = "t2.micro") then key value pair (key name = "xxxx") security groups like subnet id's all of this thing we can provide in tfvars file and then we run terraform apply bydefault terraform look for terraform.tfvars file and it will replace or update the values inside input.tf, what ever we provde in input.tf
+
+
+
 
 
 
