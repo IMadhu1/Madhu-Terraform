@@ -211,7 +211,7 @@ Provider "aws"{
 bunch of configuration 
 }
 resource "aws_instance" "Name of the resource" {
-  ami = var.ami_value
+  ami = var.ami_id
   instance_type =  var.instance_type
 }
 but where will get the variables so what we need to do is before resource means in between provider and resource configuration what will try to is here we will write all the variables that we want to use.
@@ -227,6 +227,14 @@ Variable "instance_type" {
   }
 Lets say after EC2 instance creation we dont want to go to AWS UI an we dont want to check the Public IP. If our EC2 instance having public IP what we can do is in the output variable we can tell tf to print public IP, every time tf runs once the tf creates resource in aws as an output it will give oublic ip back.
 Will create something called as main.tf, inside the main.tf as ususally will write the provider configuration or we can write the provider configuration in provider.tf as well. 
+First we can start with key word called variable and after that we should be provide the name of the variable we want to use, inside that description is not mandate it just readable purpose. 
+Any programming language when we are creating a variable if it is statically type programming langauge we will mention what is the type of the varaible. type=string it can be bullian or any other and the default value is t2.micro 
+Whenever we use this particular variable using var.name of the variable (var.instance_type) it will replace with default t2.micro. what will happens is we are not hard coding the values we are using in a seperate variable section and we can update this variable section from the tf apply command as well that means we can pass the values to this variables from the tf apply command or we can out the values in a different tf file as well which is called tfvars.
+what exactly we are trying to do using variable is we are paramatarise out tf project so that it is just not used by one particular team as a DevOPS member we can redistribute or reuse particular tf project to different team.
+
+
+
+
 
 
 
