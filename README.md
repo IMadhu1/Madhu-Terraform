@@ -265,7 +265,41 @@ we will say what is the name of the tfvars if we are using terraform.tfvars we d
 
 ** Conditional Expressions **
 Conditional Expressions are nothing but, insome cases we want to excute, lets say there is a resource block and this particular resource block called aws_instance, in that particular resource we want to execute some values like 10 or 12 values want to execute on Dev environment where as if its a Prod aws environment we ant to modify these couple fields or dont want to execute couple of fields.
-For example we have a S3 bucket and if we are creating S3 bucket on Dev cluster i.e. Dev aws environment, lets say we want to enable public access to S3 bucket, where as if it a Prod cluster we dont want to enable the public access to the S3 bucket. what we are trying to do here is we are going to porform Conditional actions.
+For example we have a S3 bucket and if we are creating S3 bucket on Dev cluster i.e. Dev aws environment, lets say we want to enable public access to S3 bucket, where as if it a Prod cluster we dont want to enable the public access to the S3 bucket. what we are trying to do here is we are going to porform Conditional actions. Other programming langueges we are handled bu If condition.
+where as in tf we have something called as Conditional Operators, 
+The syntax for conditional operator is 
+Condition ? true_val : False_Val
+Condition is an expression that evaluates either true or false
+true_val is the value that is returned if the condition is true
+false_val is the value that is returned if the condition is false
+
+lets take the simple example
+resource "aws_Security_group" "example" {
+    name = "example_sg"
+    description = "example security group"
+    ingress {
+    from_Port = 22
+    to_port = 22
+    protocal = "tcp"
+    cidr_blocks = var.environment == "Production" ? [var.production_subnet_cidr] : [var.development_subnet_cidr]
+    }
+   } 
+we are trying to create resurce calles security group in aws, we have provided the name of the security group and provided the description of the security group in the security group we are saying allow 22 which is allow 22 SSH but only allow for a particular cidr block that means allow SSH to this particular instance where the security group is assigned where if the environment is production then assign production cidr block if the environment is not production then assign dev cidr block.
+var.production_subnet_cidr is
+varable "Production_subnet_cidr" {
+description = "CIDR blovk for production subnet"
+type = "string"
+default = "10.10.1.0\24"
+}
+
+varable "development_subnet_cidr" {
+description = "CIDR blovk for development subnet"
+type = "string"
+default = "10.10.2.0\24"
+}
+
+** Built in Functions **
+TF provides a wide range of buil in functions that we can use with in our configuration files to manipulate and tranform data. These functions help to perform various tasks when defining infrastructure.
 
 
 
