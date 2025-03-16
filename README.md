@@ -231,8 +231,13 @@ First we can start with key word called variable and after that we should be pro
 Any programming language when we are creating a variable if it is statically type programming langauge we will mention what is the type of the varaible. type=string it can be bullian or any other and the default value is t2.micro 
 Whenever we use this particular variable using var.name of the variable (var.instance_type) it will replace with default t2.micro. what will happens is we are not hard coding the values we are using in a seperate variable section and we can update this variable section from the tf apply command as well that means we can pass the values to this variables from the tf apply command or we can out the values in a different tf file as well which is called tfvars.
 what exactly we are trying to do using variable is we are paramatarise out tf project so that it is just not used by one particular team as a DevOPS member we can redistribute or reuse particular tf project to different team.
+these are the input variable where we can pass the information to tf project. where as we can also use output variable but the syntax will be slightly different.
 
-
+Output "Public_IP" {
+  descriptio = "Public IP address of EC2 instance"
+  Value = "aws_instance.example_instance.Public_IP"
+  }
+  
 
 
 
