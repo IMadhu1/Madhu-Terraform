@@ -232,12 +232,29 @@ Any programming language when we are creating a variable if it is statically typ
 Whenever we use this particular variable using var.name of the variable (var.instance_type) it will replace with default t2.micro. what will happens is we are not hard coding the values we are using in a seperate variable section and we can update this variable section from the tf apply command as well that means we can pass the values to this variables from the tf apply command or we can out the values in a different tf file as well which is called tfvars.
 what exactly we are trying to do using variable is we are paramatarise out tf project so that it is just not used by one particular team as a DevOPS member we can redistribute or reuse particular tf project to different team.
 these are the input variable where we can pass the information to tf project. where as we can also use output variable but the syntax will be slightly different.
-
+The syntax for the output variable will start with output keyword which we ask tf to give back once the tf apply command successful.
 Output "Public_IP" {
   descriptio = "Public IP address of EC2 instance"
   Value = "aws_instance.example_instance.Public_IP"
   }
-  
+lets say we want to get the aws instance public ip so will say output public ip and there we can mention what is the value we are looking for.
+resource.resource name
+If we want for a different EC2 instance will say aws_instance.example_instance2 or the name of the particular resource and followed by the public IP because we are looking for public ip.
+When we use output as a keyword we are telling tf to give me that particular information. when we are providing or prefexing with variable as keyword we are tellinig tf take this as values.
+when we write tf project in ouranization there will be a structure for terraform because we cant run everything in single main.tf, what will do is we will split it.
+The provider configuration from the main.tf can be writen in provider.tf file, input values we can pass they can be provided in the input.tf, the output variables can be provided in the output.tf, 
+
+TF Structure:
+main.tf
+provider.tf
+inpit.tf
+output.tf
+terraform.tfvars
+
+this is the standard peocess, we can change the names of this file but if we use this standard way anybody who will read your project they will understand.
+and the file name called main.tf apart from this there is a file calles terraform.tfvars
+** terraform.tfvars **
+when we are executing the particular tf project we want to take the values of the variable dynamically.  so the instance_type for one project the DevOps team is supporting is t2.micro and tomorrow someone comes and executing this 
 
 
 
