@@ -225,7 +225,8 @@ Variable "instance_type" {
       description = "EC2 AMI ID"
       type = "string"
   }
-  
+Lets say after EC2 instance creation we dont want to go to AWS UI an we dont want to check the Public IP. If our EC2 instance having public IP what we can do is in the output variable we can tell tf to print public IP, every time tf runs once the tf creates resource in aws as an output it will give oublic ip back.
+Will create something called as main.tf, inside the main.tf as ususally will write the provider configuration or we can write the provider configuration in provider.tf as well. 
 
 
 
