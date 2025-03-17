@@ -308,7 +308,11 @@ Module in Terraform -- > Age, Ownership, Maintenance
 We are working in an organization and this Organization have some million of lines source code and lets say this source code written in Java and the name of the company is Amazon. we all know all companies these days are using micro service architecture.
 at this moment assume amazon using Monolithic architecture which means all million of lines code is written in one single application or one single project. we might be thinking that everything is written as a single application then what is the problem, the problem would be there is a bug in this particular application and there is a new person who joined this team and we assigned to him with this particular bug, now this person would take Ages to understand where exactly the bug or that person may take lot of time to read firstly he entire millon lines of code.
 Technically is not easy to find where the bug is so this person ends up spending lot of days to just understand where the bug is and second thing the lack of ownershi, again lets say there is a bug and we want to assign this particular bug to any of the developer and tell them that ok try to fix this bug because this is created due to the code or due to changes that we have implemented that would be not possible because there could be 100 of deveoplers writing millions of lines of code and we cant say exactly who owns the which part so there is lack of ownership.
-Maintenence would be very very difficult, what does it mean 
+Maintenence would be very very difficult, what does it mean lets say we want to keep upgrading this particular application. we want to make sure that this application dont want any security vulnerabilities so the problem is again because this is one signle application and have milliones of lines of code. It is practically to create lots of challange to maintain the application. So to address all of these things and beyond this there is another simple thing that is lets you figured out the bug as well and you try to fix this thing. now to test this piece of code which part of the application would we test.
+because it is single application we will test the entire application and we will deploy the entire application so testing would also be very difficult.
+To address all of these things what developers had done or what software industry has done is they have transition from monolithic architecture to micro service architecture same thing happens in TF as well.
+
+
 
 
 
