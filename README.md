@@ -311,7 +311,9 @@ Technically is not easy to find where the bug is so this person ends up spending
 Maintenence would be very very difficult, what does it mean lets say we want to keep upgrading this particular application. we want to make sure that this application dont want any security vulnerabilities so the problem is again because this is one signle application and have milliones of lines of code. It is practically to create lots of challange to maintain the application. So to address all of these things and beyond this there is another simple thing that is lets you figured out the bug as well and you try to fix this thing. now to test this piece of code which part of the application would we test.
 because it is single application we will test the entire application and we will deploy the entire application so testing would also be very difficult.
 To address all of these things what developers had done or what software industry has done is they have transition from monolithic architecture to micro service architecture same thing happens in TF as well.
-
+Terraform: Even with TF there will be one particular provide that we want to automate, ususally these days companies mostly there will be one single provider. but other cases if we work on hybrid cloud architecture we might be work on multiple providers as well. 
+Lets say that in your organization AWS and we are using TF to automate AWS, Lets asume we are using one particular TF Project and there can be hundreds of development projects. take example of one development team. Even for one dev team as a devops engineer we might create lot of resources. one single development team can use VPC, EC2 Instances, Load Balancer and they might be use EKS cluster and lamda functions, S3 buckets.
+If we try to put all of these things in one single TF project, if we create one TF project for all the requirement of this development team. Our TF project will increase leaps & bounds 
 
 
 
